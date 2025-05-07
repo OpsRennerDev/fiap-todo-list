@@ -1,0 +1,15 @@
+name: Hello World Demo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Say Hello
+        run: echo "🎉 Olá mundo! O GitHub Actions tá funcionando!"
